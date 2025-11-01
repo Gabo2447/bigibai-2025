@@ -6,6 +6,24 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+
+  mask-image: url("/lock.svg");
+  mask-position: center 50%;
+  mask-repeat: no-repeat;
+  mask-size: 50px;
+
+  &.unlocked {
+    animation: lock-reveal 2.5s forwards ease-in-out;
+  }
+}
+
+@keyframes lock-reveal {
+  0% {
+    mask-size: 50px;
+  }
+  100% {
+    mask-size: 1000vh;
+  }
 }
 
 @font-face {
@@ -30,6 +48,10 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@theme {
+  --color-brand: #f8b134;
 }
 
 h1,
