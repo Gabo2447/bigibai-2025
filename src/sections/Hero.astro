@@ -1,3 +1,7 @@
+---
+import SubscribeForm from "@/newsletter/components/SubscribeForm.astro";
+---
+
 <main
   class="max-w-4xl mx-auto flex items-center justify-center px-4 py-20 flex-col gap-4"
 >
@@ -8,8 +12,5 @@
   <h2 class="text-5xl font-normal text-white text-center">
     ¿Quieres que te avisemos?
   </h2>
-  <form>
-    <input type="email" required placeholder="hi@gabo.dev" />
-    <button type="submit">Enviar</button>
-  </form>
+  <SubscribeForm />
 </main>

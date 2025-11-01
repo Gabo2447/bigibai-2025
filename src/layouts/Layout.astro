@@ -1,14 +1,35 @@
 ---
-import "../styles/global.css";
-
-import GradientOverlay from "../components/gradientOverlay.astro";
+import "@/styles/global.css";
+import GradientOverlay from "@/components/GradientOverlay.astro";
 ---
 
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
     <title>Big Ibai: Calendario de Adviento con Ibai</title>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="bigibai" />
+    <meta name="author" content="Ibai Llanos" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/cropped-favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="180x180"
+      href="/cropped-favicon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="270x270"
+      href="/cropped-favicon-270x270.png"
+    />
   </head>
   <body>
     <div id="background-mask" class="min-h-screen w-full">
@@ -32,3 +53,13 @@ import GradientOverlay from "../components/gradientOverlay.astro";
     height: 100%;
   }
 </style>
+
+<script>
+  const backgroundMask = document.getElementById(
+    "background-mask"
+  ) as HTMLDivElement;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    backgroundMask.classList.add("unlocked");
+  });
+</script>
